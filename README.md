@@ -1,5 +1,5 @@
 # Taro-Template
-[Taro](https://taro-docs.jd.com/docs/)+[Redux](https://www.redux.org.cn/tutorials/)+TypeScript+[TaroUI](https://taro-ui.jd.com/#/)+Eslint
+[Taro](https://taro-docs.jd.com/docs/)+[Redux](https://www.redux.org.cn/tutorials/)+TypeScript+[NutUI](https://nutui.jd.com/)+Eslint
 
 
 
@@ -31,6 +31,8 @@ $ pnpm run build:weapp
 |   └── prod.js                 生产环境配置
 |
 ├── src                         源码目录
+|   ├── assets                  资源文件目录
+|   ├── store                   Redux
 |   ├── pages                   页面文件目录
 |   |   └── index               index 页面目录
 |   |       ├── index.js        index 页面逻辑
