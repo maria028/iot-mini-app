@@ -7,7 +7,7 @@ import prodConfig from './prod'
 export default defineConfig(async (merge, { command, mode }) => {
   const baseConfig: UserConfigExport = {
     projectName: 'iot-mini-app',
-    date: '2024-1-8',
+    date: '2024-2-4',
     designWidth: 750,
     deviceRatio: {
       640: 2.34 / 2,
