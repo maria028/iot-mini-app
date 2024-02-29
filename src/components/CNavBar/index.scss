@@ -1,0 +1,15 @@
+:root,
+page {
+    --nutui-navbar-background: transparent;
+    --nutui-navbar-title-font-size: 36px;
+}
+
+.c-navbar {
+    z-index: 10;
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}

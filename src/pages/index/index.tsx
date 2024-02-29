@@ -1,16 +1,30 @@
-import { View, Text } from '@tarojs/components'
-import { useLoad } from '@tarojs/taro'
-import './index.scss'
+/*
+ * @Author: pzy 1012839072@qq.com
+ * @Date: 2024-02-28 10:39:37
+ * @LastEditors: pzy 1012839072@qq.com
+ * @LastEditTime: 2024-02-29 16:02:02
+ * @Description:
+ */
+import { View } from "@tarojs/components";
+import { useLoad } from "@tarojs/taro";
+import { Image } from "@nutui/nutui-react-taro";
+import CTabbar from "@/components/CTabbar";
+import CNavBar from "@/components/CNavBar";
 
-export default function Test() {
+import "./index.scss";
 
-  useLoad(() => {
-    console.log('Page loaded.')
-  })
+export default function Index() {
+    useLoad(() => {
+        console.log("Page loaded.");
+    });
 
-  return (
-    <View className='test'>
-      <Text>Hello world!</Text>
-    </View>
-  )
+    return (
+        <View className="index">
+            <CNavBar back={<View className="navbar-title">首页</View>} style={{ backgroundColor: "#00000000" }} fixed />
+            <View>
+                <Image src={require("@/assets/images/index-bg.png")} mode={"widthFix"} height={200} />
+            </View>
+            <CTabbar value={0} />
+        </View>
+    );
 }

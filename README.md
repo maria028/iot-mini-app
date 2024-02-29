@@ -31,6 +31,7 @@ $ pnpm run build:weapp
 |   └── prod.js                 生产环境配置
 |
 ├── src                         源码目录
+|   ├── components              组件
 |   ├── assets                  资源文件目录
 |   ├── store                   Redux
 |   ├── pages                   页面文件目录

@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "iconfont"; /* Project id 4372634 */
+    src: url("iconfont.woff?t=1709089152597") format("woff");
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-copy:before {
+    content: "\e685";
+}
+
+.icon-deviceSetting-white:before {
+    content: "\e702";
+}
+
+.icon-deviceSetting:before {
+    content: "\e6fa";
+}
+
+.icon-deviceStatus:before {
+    content: "\e6fc";
+}
+
+.icon-deviceReport:before {
+    content: "\e6fd";
+}
+
+.icon-deviceView:before {
+    content: "\e6fe";
+}
+
+.icon-deviceMap:before {
+    content: "\e6ff";
+}
+
+.icon-deviceAlarm:before {
+    content: "\e701";
+}
+
+.icon-deviceReport-white:before {
+    content: "\e703";
+}
+
+.icon-deviceMap-white:before {
+    content: "\e704";
+}
+
+.icon-deviceAlarm-white:before {
+    content: "\e705";
+}
+
+.icon-delete:before {
+    content: "\e6f5";
+}
+
+.icon-edit:before {
+    content: "\e6f3";
+}
+
+.icon-describe:before {
+    content: "\e6f4";
+}
+
+.icon-arrowRight:before {
+    content: "\e6f6";
+}
+
+.icon-user:before {
+    content: "\e6f7";
+}
+
+.icon-charge:before {
+    content: "\e6f8";
+}
+
+.icon-amount:before {
+    content: "\e6f9";
+}
+
+.icon-success:before {
+    content: "\e6fb";
+}
