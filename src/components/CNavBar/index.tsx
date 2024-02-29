@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-02-28 17:37:15
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-02-29 15:48:32
+ * @LastEditTime: 2024-02-29 17:14:28
  * @Description:
  */
 import { FC, memo, CSSProperties, ReactNode } from "react";
@@ -21,15 +21,15 @@ type Props = {
 };
 
 const CNavBar: FC<Props> = ({ title, back, fixed, placeholder, style = {} }) => {
-    const [height, paddingTop] = useCustomNavBarParams();
+    const { navigationBarHeight, statusBarHeight } = useCustomNavBarParams();
 
     return (
         <>
             <View
                 style={Object.assign(
                     {
-                        height: `${height}px`,
-                        paddingTop: `${paddingTop}px`,
+                        height: `${navigationBarHeight}px`,
+                        paddingTop: `${statusBarHeight}px`,
                         backgroundColor: "#ffffff"
                     },
                     style
