@@ -34,6 +34,9 @@ $ pnpm run build:weapp
 |   ├── components              组件
 |   ├── assets                  资源文件目录
 |   ├── store                   Redux
+|   ├── hooks                   Hooks
+|   ├── services                api请求
+|   ├── utils                   函数、工具
 |   ├── pages                   页面文件目录
 |   |   └── index               index 页面目录
 |   |       ├── index.js        index 页面逻辑
