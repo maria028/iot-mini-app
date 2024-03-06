@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-02-28 17:37:15
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-02-29 17:14:28
+ * @LastEditTime: 2024-03-05 16:29:30
  * @Description:
  */
 import { FC, memo, CSSProperties, ReactNode } from "react";
@@ -34,8 +34,7 @@ const CNavBar: FC<Props> = ({ title, back, fixed, placeholder, style = {} }) => 
                     },
                     style
                 )}
-                className={`c-navbar ${fixed ? "fixed" : ""}`}
-            >
+                className={`c-navbar ${fixed ? "fixed" : ""}`}>
                 <NavBar back={back ? back : <ArrowLeft size={16} />}>
                     <span>{title}</span>
                 </NavBar>
@@ -44,8 +43,8 @@ const CNavBar: FC<Props> = ({ title, back, fixed, placeholder, style = {} }) => 
             {placeholder && (
                 <View
                     style={{
-                        height: `${height}px`,
-                        paddingTop: `${paddingTop}px`
+                        height: `${navigationBarHeight}px`,
+                        paddingTop: `${statusBarHeight}px`
                     }}
                 />
             )}

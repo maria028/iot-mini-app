@@ -1,5 +1,11 @@
+/*
+ * @Author: pzy 1012839072@qq.com
+ * @Date: 2024-03-01 17:23:10
+ * @LastEditors: pzy 1012839072@qq.com
+ * @LastEditTime: 2024-03-06 11:49:38
+ * @Description:
+ */
 import Taro from "@tarojs/taro";
-import storage from "@/utils/storage";
 // import { MODE_TYPE } from "@/constants/common";
 
 export const responseError = (response: any) => {
@@ -18,7 +24,7 @@ export const responseError = (response: any) => {
                         message = response.data.message;
                         break;
                     default: {
-                        storage.remove("access_token");
+                        // storage.remove("access_token");
                         message = response.data.message;
                         // todo
                         // setTimeout(() => {

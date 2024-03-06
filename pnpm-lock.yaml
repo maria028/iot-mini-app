@@ -71,6 +71,9 @@ dependencies:
   babel-plugin-import:
     specifier: ^1.13.8
     version: registry.npmmirror.com/babel-plugin-import@1.13.8
+  base64-js:
+    specifier: ^1.5.1
+    version: registry.npmmirror.com/base64-js@1.5.1
   crypto-js:
     specifier: ^4.2.0
     version: registry.npmmirror.com/crypto-js@4.2.0

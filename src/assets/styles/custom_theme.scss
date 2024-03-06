@@ -1,5 +1,7 @@
 :root,
 page {
     --nutui-color-primary: #1a90ff; // 主色调 覆盖NutUI
+    --nutui-form-item-required-color: #fa2c19;
+    --nutui-form-item-error-message-color: var(--nutui-form-item-required-color);
     --screen-padding: 32px; // 屏幕边距
 }

@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-03-01 14:50:20
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-05 14:53:33
+ * @LastEditTime: 2024-03-06 11:50:25
  * @Description:
  */
 /*
@@ -17,7 +17,6 @@ import { responseError } from "./error";
 import { getSign } from "./sign";
 import { verifyUrl, serialize } from "./verify";
 import { ParamsType, OptionType } from "./RequestType";
-import storage from "../storage";
 
 const baseProxy = "/api";
 const API_ROOT = "https://iot.hzwaterit.com";
@@ -34,7 +33,7 @@ export default {
                 "content-type": params.contentType || "application/json" // 默认
             },
             success(res: any) {
-                console.log("res", res);
+                console.log("Taro.request  res==", res);
                 //需要不提示返回信息的接口
                 if (verifyUrl(params, "cMsg") || params?.responseType == "blob") {
                     return res.data;
@@ -62,7 +61,7 @@ export default {
             option.url += `?${serialize(getSign(param))}`;
         } else {
             // header携带access_token
-            option.header["Fawkes-Auth"] = `${storage.get("access_token")}`;
+            // option.header["Fawkes-Auth"] = `${storage.get("access_token")}`;
         }
         return Taro.request(option);
     },

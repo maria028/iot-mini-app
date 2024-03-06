@@ -2,12 +2,12 @@ import HmacSHA1 from "crypto-js/hmac-sha1";
 import Base64 from "crypto-js/enc-base64";
 import dayjs from "dayjs";
 import { CLIENT, CLIENT_SECRET, TTL } from "@/config";
-import storage from "../storage";
 import { validatenull } from "../validate";
 
 const Dvalue = () => {
     //在这里省去了服务器校验时间这一步，所以默认返回的是0
-    return storage.get("ts-D-value") == undefined ? 0 : Number(storage.get("ts-D-value"));
+    return 0;
+    // return storage.get("ts-D-value") == undefined ? 0 : Number(storage.get("ts-D-value"));
 };
 
 //获取加密后的url参数字符串
