@@ -95,6 +95,9 @@ dependencies:
   redux-logger:
     specifier: ^3.0.6
     version: registry.npmmirror.com/redux-logger@3.0.6
+  redux-persist:
+    specifier: ^6.0.0
+    version: registry.npmmirror.com/redux-persist@6.0.0(react@18.2.0)(redux@5.0.1)
   redux-thunk:
     specifier: ^3.1.0
     version: registry.npmmirror.com/redux-thunk@3.1.0(redux@5.0.1)
@@ -14666,6 +14669,22 @@ packages:
     version: 3.0.6
     dependencies:
       deep-diff: registry.npmmirror.com/deep-diff@0.3.8
+    dev: false
+
+  registry.npmmirror.com/redux-persist@6.0.0(react@18.2.0)(redux@5.0.1):
+    resolution: {integrity: sha512-71LLMbUq2r02ng2We9S215LtPu3fY0KgaGE0k8WRgl6RkqxtGfl7HUozz1Dftwsb0D/5mZ8dwAaPbtnzfvbEwQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/redux-persist/-/redux-persist-6.0.0.tgz}
+    id: registry.npmmirror.com/redux-persist/6.0.0
+    name: redux-persist
+    version: 6.0.0
+    peerDependencies:
+      react: '>=16'
+      redux: '>4.0.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      react: registry.npmmirror.com/react@18.2.0
+      redux: registry.npmmirror.com/redux@5.0.1
     dev: false
 
   registry.npmmirror.com/redux-thunk@3.1.0(redux@5.0.1):

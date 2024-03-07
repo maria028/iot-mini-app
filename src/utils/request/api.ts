@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-03-01 14:50:20
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-06 11:50:25
+ * @LastEditTime: 2024-03-06 16:03:08
  * @Description:
  */
 /*
@@ -61,7 +61,7 @@ export default {
             option.url += `?${serialize(getSign(param))}`;
         } else {
             // header携带access_token
-            // option.header["Fawkes-Auth"] = `${storage.get("access_token")}`;
+            // option.header["Fawkes-Auth"] = `${storage.getItem("access_token")}`;
         }
         return Taro.request(option);
     },

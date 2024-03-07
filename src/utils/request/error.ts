@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-03-01 17:23:10
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-06 11:49:38
+ * @LastEditTime: 2024-03-06 16:03:15
  * @Description:
  */
 import Taro from "@tarojs/taro";
@@ -29,7 +29,7 @@ export const responseError = (response: any) => {
                         // todo
                         // setTimeout(() => {
                         //     // 未登录，无权限访问
-                        //     if (storage.get("mode") == MODE_TYPE.DEV) {
+                        //     if (storage.getItem("mode") == MODE_TYPE.DEV) {
                         //         store.commit("setIsLogin", false); //清除登录
                         //         // 运维角色
                         //         Taro.reLaunch({
