@@ -1,6 +1,6 @@
 :root,
 page {
-    background: #f2f2f2;
+    background: var(--my-gackground-color-gray);
 }
 
 .index {
@@ -8,11 +8,111 @@ page {
         font-size: 36px;
         color: #ffffff;
     }
+    .account-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 
     .account-card {
+        position: relative;
         width: 686px;
         height: 415px;
         background: linear-gradient(188deg, #e9f8ff 0%, #ffffff 100%);
         border: 6px solid #ffffff;
+        border-radius: 8rpx;
+        overflow: hidden;
+        &-content {
+            padding: 0 26px 0 40px;
+            transform: translateZ(2px);
+            .small-title {
+                font-size: 24rpx;
+                font-family: SourceHanSansCN, SourceHanSansCN;
+                font-weight: 400;
+                color: var(--my-sub-text-color);
+                line-height: 36rpx;
+                margin-top: 24rpx;
+                margin-bottom: 16rpx;
+            }
+
+            .description {
+                font-size: 36rpx;
+                font-family: DingTalk-JinBuTi;
+                color: #ffffff;
+                line-height: 90rpx;
+            }
+
+            .balance {
+                font-size: 88rpx;
+                font-family: Roboto, Roboto;
+                font-weight: 500;
+                color: var(--my-text-color);
+                line-height: 103rpx;
+                position: relative;
+
+                &::after {
+                    content: "元";
+                    font-size: 32rpx;
+                    font-family: SourceHanSansCN, SourceHanSansCN;
+                    font-weight: 400;
+                    color: var(--my-text-color);
+                    line-height: 48rpx;
+                    position: absolute;
+                    bottom: 12rpx;
+                    padding-left: 10rpx;
+                }
+            }
+
+            .tag {
+                width: 132rpx;
+                height: 48rpx;
+                background: rgba(255, 77, 79, 0.16);
+                border-radius: 24rpx;
+                font-size: 24rpx;
+                font-family: SourceHanSansCN, SourceHanSansCN;
+                font-weight: 500;
+                color: #ff4d4f;
+                line-height: 36rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 66rpx;
+            }
+
+            .label {
+                color: var(--my-sub-text-color) !important;
+                flex-shrink: 0;
+            }
+
+            .value {
+                font-size: 32rpx;
+                font-family: SourceHanSansCN, SourceHanSansCN;
+                font-weight: 400;
+                color: var(--my-text-color);
+                line-height: 48rpx;
+            }
+        }
+
+        .bg-image {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateZ(1px);
+        }
+        .bg-image-text {
+            font-size: 68px;
+            font-family: DingTalk-JinBuTi;
+            font-weight: normal;
+            color: #ffffff;
+            line-height: 90px;
+            background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: absolute;
+            right: 8px;
+            top: 12px;
+        }
     }
 }

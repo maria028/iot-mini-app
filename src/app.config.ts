@@ -2,11 +2,11 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-02-04 17:31:59
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-06 11:22:35
+ * @LastEditTime: 2024-03-07 18:04:41
  * @Description:
  */
 export default defineAppConfig({
-    pages: ["pages/index/index", "pages/profile/index", "pages/order/index", "pages/login/index", "pages/test/index"],
+    pages: ["pages/blank/index", "pages/index/index", "pages/profile/index", "pages/order/index", "pages/login/index", "pages/test/index"],
     tabBar: {
         backgroundColor: "#ffffff",
         color: "#7d7e80",

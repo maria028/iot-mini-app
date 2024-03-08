@@ -2,10 +2,10 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2023-10-08 15:28:17
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-01 17:31:28
+ * @LastEditTime: 2024-03-08 11:34:54
  * @Description: 开发配置，用于开发调试
  */
-// export const API_ROOT_DEV = "http://192.168.71.120:8216"; //测试开发环境
+// export const API_ROOT_DEV = "http://192.168.90.237:8216"; //测试开发环境
 // export const  API_ROOT_DEV = 'https://120.55.62.248'//测试开发环境
 export const API_ROOT_DEV = "https://iot.hzwaterit.com"; //测试开发环境
 export const API_ROOT_PROD = "https://iot.hzwaterit.com"; //生产环境

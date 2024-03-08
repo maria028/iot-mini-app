@@ -1,8 +1,12 @@
 import Taro from "@tarojs/taro";
 export default {
     async getItem(key: string) {
-        const res = await Taro.getStorage({ key });
-        return res.data;
+        try {
+            const res = await Taro.getStorage({ key });
+            return res.data;
+        } catch {
+            return null;
+        }
     },
 
     setItem(key: string, data: any) {

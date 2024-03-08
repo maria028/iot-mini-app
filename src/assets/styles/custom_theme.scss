@@ -1,7 +1,25 @@
 :root,
 page {
-    --nutui-color-primary: #1a90ff; // 主色调 覆盖NutUI
-    --nutui-form-item-required-color: #fa2c19;
-    --nutui-form-item-error-message-color: var(--nutui-form-item-required-color);
+    // 颜色
+    --my-theme-color: #1a90ff; // 主色调
+    --my-gackground-color: #ffffff; // 页面底色
+    --my-gackground-color-gray: #f2f2f2; // 页面底色  灰色
+
+    // 边距
     --screen-padding: 32px; // 屏幕边距
+    // 文本
+    --my-text-font-size: 28px; // 文本字体大小
+    --my-titile-font-size: 32px; // 标题字体大小
+    --my-text-color: #333333; // 文本颜色
+    --my-sub-text-color: #999999; // 次文本颜色
+
+    // 覆盖NutUI
+    --nutui-color-primary: var(--my-theme-color); // 主色调
+    --nutui-form-item-required-color: #ff4d4f;
+    --nutui-form-item-error-message-color: var(--nutui-form-item-required-color);
+    --nutui-input-font-size: var(--my-text-font-size); // 输入框字体大小
+    --nutui-brand-stop-1: var(--nutui-color-primary); // 渐变色1
+    --nutui-brand-stop-2: var(--nutui-color-primary); // 渐变色2
+    --nutui-color-primary-stop-1: var(--nutui-brand-stop-1);
+    --nutui-color-primary-stop-2: var(--nutui-brand-stop-2);
 }
