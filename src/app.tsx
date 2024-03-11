@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-02-05 09:52:53
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-08 12:52:11
+ * @LastEditTime: 2024-03-11 10:48:44
  * @Description:
  */
 import { FC } from "react";
@@ -56,7 +56,7 @@ const App: FC = ({ children }: any) => {
     const startApp = () => {
         if (Taro.getStorageSync("isAdmin") && !Taro.getStorageSync("isLogin")) {
             //管理员 未登录/token超时  跳转登录页面
-            Taro.reLaunch({ url: `/pages/login/login` });
+            Taro.reLaunch({ url: `/pages/login/index` });
         } else {
             Taro.reLaunch({
                 url: `/pages/index/index`

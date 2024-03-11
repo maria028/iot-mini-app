@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-02-27 14:39:32
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-08 12:41:19
+ * @LastEditTime: 2024-03-11 10:56:40
  * @Description:首页
  */
 import { useState } from "react";
@@ -53,8 +53,11 @@ export default function Login() {
             password: pwdEncrypt(password)
         })
             .then((res: any) => {
-                if (res.data) {
-                    dispatch({ type: "GET_USER_INFO_PLAT", data: res.data });
+                console.log(res);
+                if (res.id) {
+                    dispatch({ type: "SAVE_USER_INFO_PLAT", data: res });
+                    // 加载应用配置 全局 设备运维端 todo
+                    //   dispatch("LOADING_INIT_DATA");
                     storage.setItem("isLogin", true); // 已经登录
                     storage.setItem("mode", MODE_TYPE.DEV);
                     Taro.showToast({
@@ -66,6 +69,11 @@ export default function Login() {
                         //跳转首页
                         Taro.switchTab({ url: "/pages/index/index" });
                     }, 1000);
+                } else {
+                    Taro.showToast({
+                        title: res.message ? res.message : "登录失败",
+                        icon: "none"
+                    });
                 }
             })
             .finally(() => {

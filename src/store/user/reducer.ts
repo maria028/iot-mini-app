@@ -5,7 +5,7 @@
  * @LastEditTime: 2024-03-06 17:16:35
  * @Description:
  */
-import { GET_USER_INFO_PLAT } from "./action-type";
+import { SAVE_USER_INFO_PLAT } from "./action-type";
 
 const defaultState = {
     userInfoPlat: {} //平台用户信息
@@ -13,7 +13,7 @@ const defaultState = {
 
 export default function user(state = defaultState, action: any) {
     switch (action.type) {
-        case GET_USER_INFO_PLAT:
+        case SAVE_USER_INFO_PLAT:
             return {
                 ...state,
                 userInfoPlat: action.data

@@ -2,11 +2,12 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-03-07 17:27:10
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-08 12:51:19
+ * @LastEditTime: 2024-03-11 10:41:33
  * @Description:
  */
 import Taro from "@tarojs/taro";
 import storage from "@/utils/storage";
+import { store } from "@/store";
 import { wxLogin, getWXuserInfo, getUserInfoPlat } from "@/services/user";
 
 export const checkSession = (callback?: any) => {
@@ -44,7 +45,7 @@ export const loginSilent = (callback?: any) => {
                 wxLogin(res.code)
                     .then((resp: any) => {
                         if (resp.status) {
-                            console.log("wxLogin", resp);
+                            // console.log("wxLogin", resp);
                             Taro.setStorageSync("TOKEN", resp.data);
                             // 成功获取token的后续操作
                             loginSilentCallback(callback);
@@ -80,8 +81,11 @@ export const loginSilentCallback = (callback?: any) => {
             // 是否为管理员
             getUserInfoPlat(data.data.mobile)
                 .then((e: any) => {
-                    if (e) {
-                        //是平台管理员
+                    console.log(e);
+                    if (e.data) {
+                        storage.setItem("isAdmin", true);
+                        //平台用户信息保存 此时没有token
+                        store.dispatch({ type: "SAVE_USER_INFO_PLAT", data: e.data });
                     } else {
                         // 存储登录状态  有手机号则认为已登陆
                         storage.setItem("isLogin", data.data.mobile ? true : false);
