@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-03-01 17:08:45
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-08 11:38:12
+ * @LastEditTime: 2024-03-13 10:06:17
  * @Description:用户相关
  */
 import api from "@/utils/request/api";
@@ -40,9 +40,13 @@ export function getUserInfoPlat(phone: string | number) {
 
 // 获取微信手机号
 export function getWxPhoneNumber(code: string) {
-    return api.post("/wechat-service/wechat/login/getPhoneNumber", {
-        code
-    });
+    return api.post(
+        "/wechat-service/wechat/login/getPhoneNumber",
+        {
+            code
+        },
+        "application/x-www-form-urlencoded"
+    );
 }
 
 // 获取微信用户信息

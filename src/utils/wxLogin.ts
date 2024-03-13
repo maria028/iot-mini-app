@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-03-07 17:27:10
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-11 10:41:33
+ * @LastEditTime: 2024-03-13 11:52:26
  * @Description:
  */
 import Taro from "@tarojs/taro";
@@ -78,25 +78,33 @@ export const loginSilentCallback = (callback?: any) => {
     // 获取用户信息-微信
     getWXuserInfo()
         .then((data: any) => {
-            // 是否为管理员
-            getUserInfoPlat(data.data.mobile)
-                .then((e: any) => {
-                    console.log(e);
-                    if (e.data) {
-                        storage.setItem("isAdmin", true);
-                        //平台用户信息保存 此时没有token
-                        store.dispatch({ type: "SAVE_USER_INFO_PLAT", data: e.data });
-                    } else {
-                        // 存储登录状态  有手机号则认为已登陆
-                        storage.setItem("isLogin", data.data.mobile ? true : false);
-                    }
-                    //解开启动页的进程
-                    console.log("解开启动页的进程");
-                    Taro.eventCenter.trigger("isResolve");
-                })
-                .catch((err: any) => {
-                    console.log(err);
-                });
+            store.dispatch({ type: "SAVE_USER_INFO", data: data.data });
+            if (data.data.mobile) {
+                getUserInfoPlat(data.data.mobile)
+                    .then((e: any) => {
+                        // 是否为管理员
+                        if (e.data) {
+                            storage.setItem("isAdmin", true);
+                            //平台用户信息保存 此时没有token
+                            store.dispatch({ type: "SAVE_USER_INFO_PLAT", data: e.data });
+                        } else {
+                            // 存储登录状态  有手机号则认为已登陆
+                            storage.setItem("isLogin", true);
+                        }
+                        //解开启动页的进程
+                        console.log("解开启动页的进程");
+                        Taro.eventCenter.trigger("isResolve");
+                    })
+                    .catch((err: any) => {
+                        console.log(err);
+                    });
+            } else {
+                // 存储登录状态
+                storage.setItem("isLogin", false);
+                //解开启动页的进程
+                console.log("解开启动页的进程");
+                Taro.eventCenter.trigger("isResolve");
+            }
         })
         .catch((err: any) => {
             console.log(err);

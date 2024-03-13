@@ -22,4 +22,13 @@ page {
     --nutui-brand-stop-2: var(--nutui-color-primary); // 渐变色2
     --nutui-color-primary-stop-1: var(--nutui-brand-stop-1);
     --nutui-color-primary-stop-2: var(--nutui-brand-stop-2);
+    --nutui-skeleton-line-height: 40px; // 骨架线条高度
+
+    // 默认按钮 大
+    --nutui-button-border-radius: 10px;
+    --nutui-button-default-height: 88px;
+    --nutui-button-default-background-color: var(--my-theme-color);
+    --nutui-button-default-font-size: 32px;
+    --nutui-button-default-color: #ffffff;
+    --nutui-button-border-width: 0px;
 }
