@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-03-13 09:14:14
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-13 14:15:25
+ * @LastEditTime: 2024-03-13 15:38:48
  * @Description:
  */
 import Taro from "@tarojs/taro";
@@ -56,7 +56,13 @@ const LoginButton = ({ type }) => {
         );
     } else if (type == "text") {
         return (
-            <Button openType="getPhoneNumber" block>
+            <Button
+                openType="getPhoneNumber"
+                style={{
+                    backgroundColor: "transparent",
+                    color: "#333333"
+                }}
+                onGetPhoneNumber={decryptPhoneNumber}>
                 点击登录
             </Button>
         );

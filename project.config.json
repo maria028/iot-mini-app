@@ -27,6 +27,13 @@
         "miniprogram": {
             "list": [
                 {
+                    "name": "我的",
+                    "pathName": "pages/profile/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
                     "name": "登录",
                     "pathName": "pages/login/index",
                     "query": "",

@@ -1,0 +1,48 @@
+:root,
+page {
+    background: var(--my-gackground-color-gray);
+}
+
+.profile {
+    .profile-brief {
+        display: flex;
+        align-items: center;
+        padding: 0 var(--screen-padding);
+        margin-top: -62px;
+        font-size: 44px;
+        font-weight: 400;
+        color: #333333;
+        line-height: 52px;
+    }
+    .profile-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 64px var(--screen-padding) 0;
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 44px 64px 44px 44px;
+        &-name {
+            font-size: 36px;
+            font-family: DingTalk-JinBuTi;
+            font-weight: normal;
+            color: #333333;
+            line-height: 43px;
+        }
+        &-tips {
+            font-size: 24px;
+            font-family: SourceHanSansCN, SourceHanSansCN;
+            font-weight: 400;
+            color: #999999;
+            line-height: 36px;
+            margin-top: 8px;
+        }
+    }
+    .version {
+        width: 100%;
+        color: #999999;
+        text-align: center;
+        position: absolute;
+        bottom: calc(env(safe-area-inset-bottom) + 100px + 20px);
+    }
+}

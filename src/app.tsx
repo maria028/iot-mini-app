@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-02-05 09:52:53
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-11 10:48:44
+ * @LastEditTime: 2024-03-13 14:36:29
  * @Description:
  */
 import { FC } from "react";
@@ -21,7 +21,6 @@ const App: FC = ({ children }: any) => {
     useLaunch(async () => {
         console.log("App onLaunch");
         try {
-            console.log("Promise");
             let timeoutDurationPromise = new Promise((_, reject) => setTimeout(() => reject(), 30 * 1000)); // 设置超时时长
             let isResolvePromise = new Promise<void>((resolve) => {
                 // 确保事件监听器在触发事件之前绑定
