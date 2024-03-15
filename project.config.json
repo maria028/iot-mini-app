@@ -27,6 +27,13 @@
         "miniprogram": {
             "list": [
                 {
+                    "name": "户号管理",
+                    "pathName": "packageCharge/pages/accountList/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
                     "name": "新增",
                     "pathName": "packageCharge/pages/accountDetail/index",
                     "query": "accountNumber=1083431",

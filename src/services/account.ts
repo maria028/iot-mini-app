@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-03-11 11:19:37
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-15 15:56:33
+ * @LastEditTime: 2024-03-15 17:05:53
  * @Description:
  */
 import api from "@/utils/request/api";
@@ -24,6 +24,10 @@ export function getAccountNumber(accountNumber: string) {
 // 用户户号绑定
 export function bindUserAccount(params: { accountNumber: string; description?: string }) {
     return api.post("/iot-service/userDetail/bindUserAccount", params);
+}
+// 用户户号解绑
+export function unbindUserAccount(params: { accountUserId: string; accountNumber: string }) {
+    return api.post("/iot-service/userDetail/unbindUserAccount", params);
 }
 
 // 修改绑定的户的备注信息

@@ -2,11 +2,11 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-02-28 10:39:37
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-14 15:13:54
+ * @LastEditTime: 2024-03-15 17:54:20
  * @Description:充值首页
  */
 import { useEffect, useState } from "react";
-import Taro from "@tarojs/taro";
+import Taro, { useDidShow } from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
 import { useLoad } from "@tarojs/taro";
 import { Image, Ellipsis, Skeleton, Button } from "@nutui/nutui-react-taro";
@@ -40,27 +40,23 @@ export default function Index() {
         // 登录状态更新
         getAccountNumberList();
     }, [isLogin]);
-    useLoad(() => {
+
+    useDidShow(() => {
         console.log("Page Index loaded.");
         getAccountNumberList();
     });
     //获取关联的户号列表
-    const getAccountNumberList = () => {
+    const getAccountNumberList = async () => {
         if (!isLogin) return;
         setPageLoading(true);
-        getAppUserAccount()
-            .then((res: any) => {
-                if (res.data) {
-                    dispatch({ type: "SAVE_ACCOUNT_LIST", data: res.data });
-                    setAccountList(res.data);
-                }
-            })
-            .catch(() => {
-                setAccountList([]);
-            })
-            .finally(() => {
-                setPageLoading(false);
-            });
+        try {
+            const res: any = await getAppUserAccount();
+            dispatch({ type: "SAVE_ACCOUNT_LIST", data: res.data });
+            setAccountList(res.data);
+        } catch (err) {
+            setAccountList([]);
+        }
+        setPageLoading(false);
     };
     // 跳转新增户号
     const goAccountDetail = () => {

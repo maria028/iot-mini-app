@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-03-14 14:49:08
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-15 15:57:06
+ * @LastEditTime: 2024-03-15 16:10:30
  * @Description:
  */
 import Taro from "@tarojs/taro";
@@ -28,13 +28,9 @@ export default function accountDetail() {
         console.log("Page accountDetail loaded.");
         if (options.accountNumber) {
             setAccountNumber(options.accountNumber);
-            setAccountNumber(options.accountNumber);
             setDescription(options.description);
             setPageType("edit");
             getAccountDetail(options.accountNumber);
-        } else {
-            setAccountNumber("");
-            setPageType("add");
         }
     });
     //确定户号  获取该户号的详细信息  未绑定

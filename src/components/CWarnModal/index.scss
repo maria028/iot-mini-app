@@ -1,0 +1,91 @@
+.mask {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color 0.15s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: fit-content;
+    transform-style: preserve-3d;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &-bg {
+        transform: translateZ(1px);
+    }
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transform: translateZ(2px);
+        padding: 43px 74px;
+        position: absolute;
+
+        .title {
+            font-size: 36px;
+            font-family: DingTalk-JinBuTi;
+            font-weight: normal;
+            color: #333333;
+            line-height: 43px;
+            margin-top: 20px;
+        }
+
+        .tips {
+            font-size: 28px;
+            font-family: SourceHanSansCN, SourceHanSansCN;
+            font-weight: 400;
+            color: #666666;
+            line-height: 42px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+    &-footer {
+        width: calc(100% - 30px);
+        height: 98rpx;
+        position: absolute;
+        bottom: 22rpx;
+        transform: translateZ(2px);
+        border-top: 1px #dcdee3 solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::after {
+            content: "";
+            width: 1px;
+            height: 100%;
+            background: #dcdee3;
+            position: absolute;
+            right: 50%;
+        }
+
+        .item {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #333333;
+            line-height: 51px;
+
+            &.confirm {
+                color: var(--my-theme-color);
+            }
+        }
+    }
+}
