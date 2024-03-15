@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-02-28 10:39:37
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-13 14:25:58
+ * @LastEditTime: 2024-03-14 15:13:54
  * @Description:充值首页
  */
 import { useEffect, useState } from "react";
@@ -64,9 +64,9 @@ export default function Index() {
     };
     // 跳转新增户号
     const goAccountDetail = () => {
-        // Taro.navigateTo({
-        //     url: "/packageCharge/pages/account/accountDetail"
-        // });
+        Taro.navigateTo({
+            url: "/packageCharge/pages/accountDetail/index"
+        });
     };
     //跳转充值页面
     const goCharge = (item: AccountItemType) => {

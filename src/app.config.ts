@@ -2,11 +2,25 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-02-04 17:31:59
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-07 18:04:41
+ * @LastEditTime: 2024-03-14 14:58:03
  * @Description:
  */
 export default defineAppConfig({
     pages: ["pages/blank/index", "pages/index/index", "pages/profile/index", "pages/order/index", "pages/login/index", "pages/test/index"],
+    // 分包
+    subpackages: [
+        {
+            root: "packageCharge",
+            pages: ["pages/accountDetail/index", "pages/accountList/index"]
+        }
+    ],
+    // 分包预下载
+    preloadRule: {
+        "pages/index/index": {
+            network: "all",
+            packages: ["packageCharge"]
+        }
+    },
     tabBar: {
         backgroundColor: "#ffffff",
         color: "#7d7e80",

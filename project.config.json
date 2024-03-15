@@ -27,6 +27,13 @@
         "miniprogram": {
             "list": [
                 {
+                    "name": "新增",
+                    "pathName": "packageCharge/pages/accountDetail/index",
+                    "query": "accountNumber=1083431",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
                     "name": "我的",
                     "pathName": "pages/profile/index",
                     "query": "",
