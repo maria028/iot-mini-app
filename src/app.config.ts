@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-02-04 17:31:59
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-18 08:49:55
+ * @LastEditTime: 2024-03-18 15:34:23
  * @Description:
  */
 export default defineAppConfig({
@@ -18,7 +18,12 @@ export default defineAppConfig({
     subpackages: [
         {
             root: "packageCharge",
-            pages: ["pages/accountDetail/index", "pages/accountList/index", "pages/charge/index"]
+            pages: [
+                "pages/accountDetail/index",
+                "pages/accountList/index",
+                "pages/charge/index",
+                "pages/chargeResult/index"
+            ]
         }
     ],
     // 分包预下载
