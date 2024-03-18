@@ -27,6 +27,13 @@
         "miniprogram": {
             "list": [
                 {
+                    "name": "水费充值",
+                    "pathName": "packageCharge/pages/charge/index",
+                    "query": "accountNumber=1083431",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
                     "name": "户号管理",
                     "pathName": "packageCharge/pages/accountList/index",
                     "query": "",

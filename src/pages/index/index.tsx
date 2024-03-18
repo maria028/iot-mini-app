@@ -2,13 +2,12 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-02-28 10:39:37
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-15 17:54:20
+ * @LastEditTime: 2024-03-18 10:27:13
  * @Description:充值首页
  */
 import { useEffect, useState } from "react";
 import Taro, { useDidShow } from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
-import { useLoad } from "@tarojs/taro";
 import { Image, Ellipsis, Skeleton, Button } from "@nutui/nutui-react-taro";
 import CNavBar from "@/components/CNavBar";
 import CIndexBanner from "@/components/CIndexBanner";
@@ -66,10 +65,9 @@ export default function Index() {
     };
     //跳转充值页面
     const goCharge = (item: AccountItemType) => {
-        console.log(item);
-        // Taro.navigateTo({
-        //   url: `/packageCharge/pages/charge/charge?accountNumber=${item.accountNumber}`,
-        // });
+        Taro.navigateTo({
+            url: `/packageCharge/pages/charge/index?accountNumber=${item.accountNumber}`
+        });
     };
 
     return (
@@ -100,9 +98,13 @@ export default function Index() {
                                         <View className="account-card-content">
                                             <View className="description">{item.description || item.userName}</View>
                                             <View className="small-title">账号余额</View>
-                                            <View className="" style="display: flex; align-items: center">
-                                                <View className="balance">{(Number(item.balance) / 100).toFixed(2)}</View>
-                                                {item.balance < 0 && <View className="tag">已欠费</View>}
+                                            <View className="" style={{ display: "flex", alignItems: "center" }}>
+                                                <View className="balance">
+                                                    {(Number(item.balance) / 100).toFixed(2)}
+                                                </View>
+                                                {item.balance && item.balance < 0 && (
+                                                    <View className="tag">已欠费</View>
+                                                )}
                                             </View>
                                             <View style={{ marginTop: "10px" }}>
                                                 <Text className="value label">账户号：</Text>

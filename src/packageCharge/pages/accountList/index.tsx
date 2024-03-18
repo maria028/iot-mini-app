@@ -113,7 +113,9 @@ export default function accountList() {
                                 <Text className="label">户 号：</Text>
                                 <Text className="value">{item.accountNumber}</Text>
                             </View>
-                            <View className="account-item-content-line" style={{ display: "flex", alignItems: "flex-start" }}>
+                            <View
+                                className="account-item-content-line"
+                                style={{ display: "flex", alignItems: "flex-start" }}>
                                 <Text className="label">地 址：</Text>
                                 <Text className="value">{item.accountAddress}</Text>
                             </View>

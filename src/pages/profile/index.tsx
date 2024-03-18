@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-02-28 16:40:41
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-13 16:57:36
+ * @LastEditTime: 2024-03-15 18:08:36
  * @Description:我的
  */
 import { useEffect, useState } from "react";
@@ -47,7 +47,9 @@ export default function Profile() {
     useEffect(() => {
         setMobile(userInfo.mobile);
         if (userInfo?.avatar_url) {
-            setAvatarUrl(`${process.env.NODE_ENV === "development" ? API_ROOT_DEV : API_ROOT_PROD}${userInfo.avatar_url}`);
+            setAvatarUrl(
+                `${process.env.NODE_ENV === "development" ? API_ROOT_DEV : API_ROOT_PROD}${userInfo.avatar_url}`
+            );
         }
     }, [userInfo]);
 
@@ -83,10 +85,20 @@ export default function Profile() {
             });
     };
 
+    // 跳转新增户号
+    const goAccountList = () => {
+        Taro.navigateTo({
+            url: "/packageCharge/pages/accountList/index"
+        });
+    };
+
     return (
         <View className="profile">
             {/* top 背景 */}
-            <Image src="https://iot.hzwaterit.com/iot-fe-static/iot-app-images/bg/profileBg.png" width={"100%"} mode={"widthFix"}></Image>
+            <Image
+                src="https://iot.hzwaterit.com/iot-fe-static/iot-app-images/bg/profileBg.png"
+                width={"100%"}
+                mode={"widthFix"}></Image>
             {/* 头像昵称 */}
             <View className="profile-brief">
                 <View style={{ marginRight: "40px" }}>
@@ -112,14 +124,16 @@ export default function Profile() {
             </View>
             {/* 户号管理 */}
             {mode != MODE_TYPE.DEV && (
-                <View className="profile-menu">
+                <View className="profile-menu" onClick={goAccountList}>
                     <View style={{ display: "flex", alignItems: "center" }}>
                         <View style={{ marginRight: "35px" }}>
                             <Image src={require("@/assets/images/accountList.png")} width={44} height={44}></Image>
                         </View>
                         <View>
                             <View className="profile-menu-name">户号管理</View>
-                            {accountList.length > 0 && <View className="profile-menu-tips">当前户号：{accountList.length}</View>}
+                            {accountList.length > 0 && (
+                                <View className="profile-menu-tips">当前户号：{accountList.length}</View>
+                            )}
                         </View>
                     </View>
                     <Image src={require("@/assets/images/arrowRight.png")} width={24} height={24}></Image>

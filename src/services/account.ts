@@ -2,8 +2,8 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-03-11 11:19:37
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-15 17:05:53
- * @Description:
+ * @LastEditTime: 2024-03-18 08:52:18
+ * @Description: 户号相关
  */
 import api from "@/utils/request/api";
 // 获取绑定的户列表

@@ -2,16 +2,23 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-02-04 17:31:59
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-14 14:58:03
+ * @LastEditTime: 2024-03-18 08:49:55
  * @Description:
  */
 export default defineAppConfig({
-    pages: ["pages/blank/index", "pages/index/index", "pages/profile/index", "pages/order/index", "pages/login/index", "pages/test/index"],
+    pages: [
+        "pages/blank/index",
+        "pages/index/index",
+        "pages/profile/index",
+        "pages/order/index",
+        "pages/login/index",
+        "pages/test/index"
+    ],
     // 分包
     subpackages: [
         {
             root: "packageCharge",
-            pages: ["pages/accountDetail/index", "pages/accountList/index"]
+            pages: ["pages/accountDetail/index", "pages/accountList/index", "pages/charge/index"]
         }
     ],
     // 分包预下载

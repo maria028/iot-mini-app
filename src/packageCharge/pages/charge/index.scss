@@ -1,0 +1,215 @@
+:root,
+page {
+    background: var(--my-gackground-color-gray);
+}
+
+.charge {
+    &-top {
+        position: relative;
+        width: 100%;
+        &-bg {
+            position: absolute;
+            top: 0;
+            z-index: -2;
+        }
+
+        &-content {
+            width: 100%;
+            padding: 0 var(--screen-padding);
+            z-index: 2;
+            box-sizing: border-box;
+
+            &-title {
+                font-size: 44px;
+                font-family: DingTalk-JinBuTi;
+                font-weight: normal;
+                color: var(--my-theme-color);
+                line-height: 53px;
+                padding-top: 30px;
+            }
+            &-titlesub {
+                font-size: 28px;
+                font-family: DingTalk-JinBuTi;
+                font-weight: normal;
+                color: var(--my-theme-color);
+                line-height: 34px;
+                padding-top: 16px;
+            }
+        }
+    }
+    &-info {
+        position: relative;
+        width: calc(100% - var(--screen-padding) * 2);
+        margin: 32px var(--screen-padding) 0;
+        height: auto;
+        background: #ffffff;
+        border-radius: 8px;
+        box-sizing: border-box;
+        z-index: 3;
+        &-bg {
+            position: absolute;
+            top: 0;
+            z-index: -2;
+        }
+        &-content {
+            width: 100%;
+            padding: 45px 40px;
+
+            &-label {
+                font-size: 28px;
+                color: var(--my-sub-text-color);
+                flex-shrink: 0;
+            }
+            &-value {
+                font-size: 28px;
+                color: var(--my-text-color);
+            }
+            .balance {
+                font-size: 88rpx;
+                font-family: Roboto, Roboto;
+                font-weight: 500;
+                color: var(--my-text-color);
+                line-height: 103rpx;
+                position: relative;
+
+                &::after {
+                    content: "元";
+                    font-size: 32rpx;
+                    font-family: SourceHanSansCN, SourceHanSansCN;
+                    font-weight: 400;
+                    color: var(--my-text-color);
+                    line-height: 48rpx;
+                    position: absolute;
+                    bottom: 12rpx;
+                    padding-left: 10rpx;
+                }
+            }
+
+            .tag {
+                width: 132rpx;
+                height: 48rpx;
+                background: rgba(255, 77, 79, 0.16);
+                border-radius: 24rpx;
+                font-size: 24rpx;
+                font-family: SourceHanSansCN, SourceHanSansCN;
+                font-weight: 500;
+                color: #ff4d4f;
+                line-height: 36rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 66rpx;
+            }
+        }
+    }
+    &-block {
+        position: relative;
+        width: calc(100% - var(--screen-padding) * 2);
+        margin: 32px var(--screen-padding) 0;
+        padding: 45px 40px;
+        height: auto;
+        background: #ffffff;
+        border-radius: 8px;
+        box-sizing: border-box;
+        z-index: 3;
+        &-title {
+            font-size: 28rpx;
+            font-family: DingTalk-JinBuTI;
+            font-weight: normal;
+            color: #333333;
+            line-height: 34rpx;
+        }
+        &-quick {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 30px 0;
+            &-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30%;
+                height: 72px;
+                margin-bottom: 24rpx;
+                background: #f3f5f7;
+                border-radius: 4px;
+                box-sizing: border-box;
+
+                .text {
+                    font-size: 36rpx;
+                    font-family: Roboto, Roboto;
+                    font-weight: 500;
+                    color: #666666;
+                    line-height: 42rpx;
+                }
+
+                .unit {
+                    font-size: 24rpx;
+                    font-family: SourceHanSansCN, SourceHanSansCN;
+                    font-weight: 400;
+                    color: #666666;
+                    line-height: 36rpx;
+                    margin-left: 6rpx;
+                }
+                &.active {
+                    background: rgba(26, 144, 255, 0.1);
+                    border: 2rpx solid var(--my-theme-color);
+
+                    .text,
+                    .unit {
+                        color: var(--my-theme-color) !important;
+                    }
+                }
+            }
+        }
+        &-input {
+            width: 100%;
+            height: 88px;
+            background: #f3f5f7;
+            border-radius: 8px;
+            margin-top: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .input {
+                width: 80.2%;
+                height: 100%;
+                font-size: 36px !important;
+                font-family: Roboto, Roboto;
+                font-weight: 400 !important;
+                color: #999999 !important;
+                line-height: 42px !important;
+
+                --nutui-input-background-color: transparent;
+                --nutui-input-font-size: 36px;
+            }
+
+            .unit {
+                width: 19.8%;
+                height: 100%;
+                background: #c8d0d930;
+                border-radius: 0px 8px 8px 0px;
+                font-size: 32px;
+                font-family: SourceHanSansCN, SourceHanSansCN;
+                font-weight: 400;
+                color: #333333;
+                line-height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        &-auto {
+            color: #999999;
+            font-size: 24px;
+            font-family: SourceHanSansCN, SourceHanSansCN;
+            font-weight: 400;
+            line-height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 28px;
+        }
+    }
+}
