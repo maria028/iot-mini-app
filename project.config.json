@@ -27,6 +27,13 @@
         "miniprogram": {
             "list": [
                 {
+                    "name": "账单查询",
+                    "pathName": "pages/order/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
                     "name": "水费充值",
                     "pathName": "packageCharge/pages/charge/index",
                     "query": "accountNumber=1083431",

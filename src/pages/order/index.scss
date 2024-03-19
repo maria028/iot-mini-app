@@ -1,0 +1,100 @@
+:root,
+page {
+    background: var(--my-gackground-color-gray);
+}
+.order {
+    &-chart {
+        background: #ffffff;
+    }
+    &-filter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% - var(--screen-padding) * 2);
+        margin: 48px var(--screen-padding) 32px;
+        &-type {
+            display: flex;
+            align-items: center;
+            &-item {
+                font-size: 32px;
+                font-family: DingTalk-JinBuTi;
+                font-weight: normal;
+                color: #666666;
+                line-height: 39px;
+                margin-right: 40px;
+
+                &.active {
+                    color: var(--my-theme-color);
+                }
+            }
+        }
+        &-date {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-family: Roboto, Roboto;
+            font-weight: 400;
+            color: #333333;
+            line-height: 33px;
+        }
+    }
+    &-list {
+        padding: 0 var(--screen-padding);
+        &-date {
+            background: var(--my-gackground-color-gray);
+            padding: 24px 0 24px;
+            font-size: 24px;
+            font-family: DingTalk-JinBuTi;
+            font-weight: normal;
+            color: #666666;
+            line-height: 29px;
+            position: sticky;
+            z-index: 29;
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            padding: 28px 32px;
+            margin-top: 24px;
+            height: 130px;
+            background: #ffffff;
+            border-radius: 4px;
+            box-sizing: border-box;
+            &-column {
+                width: 33.3%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                flex-shrink: 0;
+            }
+
+            &-label {
+                font-size: 24px;
+                font-weight: 400;
+                color: #999999;
+                line-height: 36px;
+            }
+
+            &-value {
+                font-size: 32px;
+                font-weight: 500;
+                color: #333333;
+                line-height: 38px;
+                margin-top: 15px;
+            }
+
+            &-unit {
+                width: 24px;
+                height: 31px;
+                font-size: 24px;
+                font-weight: normal;
+                color: #333333;
+                line-height: 31px;
+                margin-left: 2px;
+            }
+        }
+    }
+}

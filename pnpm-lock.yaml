@@ -34,7 +34,7 @@ dependencies:
     version: registry.npmmirror.com/@tarojs/plugin-html@3.6.23(@tarojs/taro@3.6.22)
   '@tarojs/plugin-platform-alipay':
     specifier: 3.6.22
-    version: registry.npmmirror.com/@tarojs/plugin-platform-alipay@3.6.22(@types/react@18.2.59)(postcss@8.4.35)(react@18.2.0)
+    version: registry.npmmirror.com/@tarojs/plugin-platform-alipay@3.6.22(@types/react@18.2.59)(postcss@8.4.35)
   '@tarojs/plugin-platform-h5':
     specifier: 3.6.22
     version: registry.npmmirror.com/@tarojs/plugin-platform-h5@3.6.22(@types/react@18.2.59)(postcss@8.4.35)
@@ -3730,7 +3730,7 @@ packages:
       - supports-color
     dev: false
 
-  registry.npmmirror.com/@tarojs/plugin-platform-alipay@3.6.22(@types/react@18.2.59)(postcss@8.4.35)(react@18.2.0):
+  registry.npmmirror.com/@tarojs/plugin-platform-alipay@3.6.22(@types/react@18.2.59)(postcss@8.4.35):
     resolution: {integrity: sha512-dmhWl2BHsL1eUNjYRKrOwQJGkpdN/LGyu+++iFSM3ra8PzwaGRxq61u1LxC+7nkf8/9dJKtG5UoEoWprxQD5yg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@tarojs/plugin-platform-alipay/-/plugin-platform-alipay-3.6.22.tgz}
     id: registry.npmmirror.com/@tarojs/plugin-platform-alipay/3.6.22
     name: '@tarojs/plugin-platform-alipay'
@@ -3746,7 +3746,6 @@ packages:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - postcss
-      - react
       - supports-color
       - vue
 
@@ -4205,7 +4204,7 @@ packages:
     dependencies:
       '@parcel/css': registry.npmmirror.com/@parcel/css@1.14.0
       '@tarojs/helper': registry.npmmirror.com/@tarojs/helper@3.6.22
-      '@tarojs/plugin-platform-alipay': registry.npmmirror.com/@tarojs/plugin-platform-alipay@3.6.22(@types/react@18.2.59)(postcss@8.4.35)(react@18.2.0)
+      '@tarojs/plugin-platform-alipay': registry.npmmirror.com/@tarojs/plugin-platform-alipay@3.6.22(@types/react@18.2.59)(postcss@8.4.35)
       '@tarojs/plugin-platform-jd': registry.npmmirror.com/@tarojs/plugin-platform-jd@3.6.22(@types/react@18.2.59)(postcss@8.4.35)
       '@tarojs/plugin-platform-qq': registry.npmmirror.com/@tarojs/plugin-platform-qq@3.6.22(@types/react@18.2.59)(postcss@8.4.35)
       '@tarojs/plugin-platform-swan': registry.npmmirror.com/@tarojs/plugin-platform-swan@3.6.22(@types/react@18.2.59)(postcss@8.4.35)
@@ -12723,10 +12722,10 @@ packages:
     version: 3.12.2
     dev: true
 
-  registry.npmmirror.com/miniprogram-compiler@0.2.2:
-    resolution: {integrity: sha512-fiJXv/15jCcRAU8YKcO7S7fkPKLa5ZBgpLN+d6B3r3KMktM5tAkDEQ+zm6aTfNoHurYOHcRyPyGf26gqQXlFXg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/miniprogram-compiler/-/miniprogram-compiler-0.2.2.tgz}
+  registry.npmmirror.com/miniprogram-compiler@0.2.3:
+    resolution: {integrity: sha512-/MfFiXTBUwYxnrTbj1hgwk1+qGkMCTL1zi8IReOq/0SPVkUxpx19E89w+ohYCELFXkMfVbD+6ejrHh3Y1u5sVg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/miniprogram-compiler/-/miniprogram-compiler-0.2.3.tgz}
     name: miniprogram-compiler
-    version: 0.2.2
+    version: 0.2.3
     dependencies:
       glob: registry.npmmirror.com/glob@7.2.3
       unescape-js: registry.npmmirror.com/unescape-js@1.1.4
@@ -12746,7 +12745,7 @@ packages:
       csso: registry.npmmirror.com/csso@3.5.1
       j-component: registry.npmmirror.com/j-component@1.4.9
       less: registry.npmmirror.com/less@3.13.1
-      miniprogram-compiler: registry.npmmirror.com/miniprogram-compiler@0.2.2
+      miniprogram-compiler: registry.npmmirror.com/miniprogram-compiler@0.2.3
       postcss: registry.npmmirror.com/postcss@7.0.39
       pretty-format: registry.npmmirror.com/pretty-format@26.6.2
     dev: true

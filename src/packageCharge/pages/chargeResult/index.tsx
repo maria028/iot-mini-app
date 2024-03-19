@@ -2,7 +2,7 @@
  * @Author: pzy 1012839072@qq.com
  * @Date: 2024-03-18 15:28:23
  * @LastEditors: pzy 1012839072@qq.com
- * @LastEditTime: 2024-03-18 15:57:26
+ * @LastEditTime: 2024-03-19 11:22:45
  * @Description:支付结果
  */
 import { View, Text } from "@tarojs/components";
@@ -34,7 +34,7 @@ export default function ChargeResult() {
         let find = ORDER_PAY_RESULT.find((i) => {
             return i.value == tradeState;
         });
-        return find ? find.label : "";
+        return find ? find.text : "";
     };
 
     return (
